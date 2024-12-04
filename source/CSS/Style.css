@@ -1,11 +1,11 @@
 body{
     /* background-color: rgb(255, 255, 255); */
     background-color: #e1e1e1;
-
     color: #474747;
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
-    height: auto;
+    height: 100%;
+    width: 100vw;
 }
 
 h1{
@@ -17,14 +17,7 @@ h2{
 }
 
 .botao{
-    /* background-color: #474747;
-    color: #cdcdcd;
-    border-radius: 5px;
-    border-width: 0cap;
-    width: auto;
-    margin: 30px;
-    padding: 20px;
-    font-size: 1em; */
+
     background-color: #576978;
     border: none;
     color: #fff;
@@ -48,13 +41,9 @@ h2{
 .content{
     display: flex;
     flex-direction: column;
-    width: 80vw;
     height: auto;
     margin: 0 auto;
     margin-top: 50px;
-    margin-bottom: 50px;
-    /* background-color: aqua; */
-
 }
 
 .Estrategia{
@@ -62,6 +51,7 @@ h2{
     margin: 0 auto;
     /* background-color: beige; */
     width: 90%;
+    margin-top: 20px;
 }
 
 .estrategia{
@@ -111,6 +101,7 @@ h2{
     flex-direction: column;
     width: 60%;
 }
+
 .PlanoDeAcao{
     text-align: center;
 }
@@ -122,10 +113,10 @@ h2{
     gap:20px;
     width: 80%;
     height: 600px;
-    /* background-color: blueviolet; */
     justify-content:space-around;
     align-items: center;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .acao{
@@ -150,6 +141,73 @@ h2{
 p{
     margin: 0px;
     text-align: left;
-    /* height:calc(100% - 20px); */
+}
 
+footer{
+    background-color: #474747;
+    color: #cdcdcd;
+    text-align: center;
+    padding: 15px;
+    padding-left: 30px;
+    margin: 0 auto;
+    margin-left: -10px;
+    margin-bottom: 0px;
+    width: 100vw;
+    height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 20px;    
+    }
+
+    .plano-de-acao{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap:20px;
+        width: 90%;
+        height: auto;
+        justify-content:space-around;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .acao{
+        width:100%;
+    }
+
+    .textoAcao{
+        display: flex;
+        width: 90%;
+        height: 200px;
+        margin-bottom: 15px;
+
+    }
+
+    .textInputs{
+        width: 80vw;
+    }
+
+    .longTextInput{
+        width: 70vw;
+    }
+
+    .shortTextInput{    
+        width: 70vw;
+    }
 }
