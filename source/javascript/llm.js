@@ -4,52 +4,87 @@ var oportunidades = document.getElementById("oportunidades");
 var ameacas = document.getElementById("ameacas");
 var segmento = document.getElementById("segmento");
 
-
 function gerarEstrategia() {
+  // Desabilita o botão e muda o texto
+  const botao = document.getElementById("botaoGerarPlano");
+  botao.disabled = true;
+  botao.textContent = "Gerando plano de ação...";
+  botao.style.cursor = "not-allowed";
+  botao.style.opacity = "0.6";
 
-var prompt = '<Considerando o mercado para o segmento de >' + segmento.value + 
-'<. uma empresa com os seguintes pontos fortes >' + pontosFortes.value + '< ,os pontos fracos >'
-+ pontosFracos.value + '<enxergando como oportunidades >' + oportunidades.value + '< e as ameaças >' + ameacas.value + 
-'< Escreva uma estratégia de acão para essa empresa em formato JSON com os seguintes campos:oque_fazer, onde_fazer, quando_fazer, com_quem_fazer, como_fazer, por_quanto_tempo_fazer>';
+  var prompt =
+    "<Considerando o mercado para o segmento de >" +
+    segmento.value +
+    "<. uma empresa com os seguintes pontos fortes >" +
+    pontosFortes.value +
+    "< ,os pontos fracos >" +
+    pontosFracos.value +
+    "<enxergando como oportunidades >" +
+    oportunidades.value +
+    "< e as ameaças >" +
+    ameacas.value +
+    "< Escreva uma estratégia de acão para essa empresa em formato JSON com os seguintes campos:oque_fazer, onde_fazer, quando_fazer, com_quem_fazer, como_fazer, por_quanto_tempo_fazer>";
 
-var YOUR_API_KEY = ""
-
-fetch("https://api.openai.com/v1/chat/completions", {
+  fetch("/api/gerar-estrategia", {
+    // Chama seu backend
     method: "POST",
     headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer " + YOUR_API_KEY // Adicione sua chave de API
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-        "model": "gpt-3.5-turbo", // Use 'gpt-4' se desejar
-        "messages": [
-            { "role": "system", "content": "Você é um especialista em estratégias de negócio." }, // Mensagem inicial (opcional)
-            { "role": "user", "content": prompt } // Substitua 'prompt' pelo conteúdo desejado
-        ],
-        "temperature": 0.5,
-        "max_tokens": 300
-    })
-})
-.then(response => response.json()) // Parse o JSON da resposta
-.then(data => {
-    if (data && data.choices && data.choices.length > 0) {
+    body: JSON.stringify({ prompt: prompt }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data && data.choices && data.choices.length > 0) {
         console.log(data.choices[0].message.content);
-        const jsonData = JSON.parse(data.choices[0].message.content); // Converte para JSON, se necessário
-        atualizarPaginaComJSON(jsonData); 
-    } else {
+        const jsonData = JSON.parse(data.choices[0].message.content);
+        atualizarPaginaComJSON(jsonData);
+      } else {
         console.error("Resposta inválida da API:", data.error || data);
-    }
-})
-.catch(error => {
-    console.error("Erro ao fazer a requisição:", error);
-});
+        alert("Erro ao gerar plano de ação. Tente novamente.");
+      }
+      reabilitarBotao();
+    })
+    .catch((error) => {
+      console.error("Erro ao fazer a requisição:", error);
+      alert("Erro ao conectar com a API. Tente novamente.");
+      reabilitarBotao();
+    });
 
-function atualizarPaginaComJSON(dados) {
+  function atualizarPaginaComJSON(dados) {
     document.getElementById("oque-fazer").textContent = dados.oque_fazer;
     document.getElementById("onde-fazer").textContent = dados.onde_fazer;
     document.getElementById("quando-fazer").textContent = dados.quando_fazer;
-    document.getElementById("com-quem-fazer").textContent = dados.com_quem_fazer;
+    document.getElementById("com-quem-fazer").textContent =
+      dados.com_quem_fazer;
     document.getElementById("como-fazer").textContent = dados.como_fazer;
-    document.getElementById("por-quanto-tempo-fazer").textContent = dados.por_quanto_tempo_fazer;
+    document.getElementById("por-quanto-tempo-fazer").textContent =
+      dados.por_quanto_tempo_fazer;
+    abrirModal();
+  }
 }
+
+function abrirModal() {
+  const modal = document.getElementById("modalPlanoDeAcao");
+  modal.style.display = "block";
 }
+
+function fecharModal() {
+  const modal = document.getElementById("modalPlanoDeAcao");
+  modal.style.display = "none";
+}
+
+function reabilitarBotao() {
+  const botao = document.getElementById("botaoGerarPlano");
+  botao.disabled = false;
+  botao.textContent = "Clique para gerar um plano de ação";
+  botao.style.cursor = "pointer";
+  botao.style.opacity = "1";
+}
+
+window.onclick = function (event) {
+  const modal = document.getElementById("modalPlanoDeAcao");
+  if (event.target == modal) {
+    fecharModal();
+  }
+};

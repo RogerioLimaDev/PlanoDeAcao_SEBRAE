@@ -1,213 +1,294 @@
-body{
-    /* background-color: rgb(255, 255, 255); */
-    background-color: #e1e1e1;
-    color: #474747;
-    font-family: 'Open Sans', sans-serif;
-    margin: 0px;
-    height: 100%;
-    width: 100vw;
+body {
+  /* background-color: rgb(255, 255, 255); */
+  background-color: #e1e1e1;
+  color: #474747;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  height: 100%;
+  width: 100vw;
 }
 
-h1{
-    font-size: 60px;
+h1 {
+  font-size: 60px;
 }
 
-h2{
-    font-size: 30px;
+h2 {
+  font-size: 30px;
 }
 
-.botao{
-
-    background-color: #576978;
-    border: none;
-    color: #fff;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 30px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    
+.subtitulo-swot {
+  font-size: 20px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  color: #5a5a5a;
+  font-weight: normal;
 }
 
-.botao:hover{
-
-    background-color: #4da4f0;
+.botao {
+  background-color: #576978;
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 50px;
+.botao:hover {
+  background-color: #4da4f0;
 }
 
-.Estrategia{
-    display: flex;
-    margin: 0 auto;
-    /* background-color: beige; */
-    width: 90%;
-    margin-top: 20px;
+.content {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-.estrategia{
-    margin: auto;
-    margin-bottom: 30px;
-    width: 100%;
-    background-color: #5e9da62b;
-    border-radius: 20px;
-    border-width: 5px;
-    border-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: auto;
-
+.Estrategia {
+  display: flex;
+  margin: 0 auto;
+  /* background-color: beige; */
+  width: 90%;
+  margin-top: 20px;
 }
 
-.longTextInput{
-    width: 70%;
-    height: 100px;
-    border-radius: 5px;
-    border-width: 0cap;
-    margin: 10px;
-    padding: 10px;
-    text-wrap: soft;
-    font-family: 'Open Sans', sans-serif;
-
+.estrategia {
+  margin: auto;
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: #5e9da62b;
+  border-radius: 20px;
+  border-width: 5px;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
 }
 
-.shortTextInput{
-    width: 70%;
-    height: 30px;
-    border-radius: 5px;
-    border-width: 0cap;
-    margin: 10px;
-    padding: 10px;
-    font-family: 'Open Sans', sans-serif;
-
+.longTextInput {
+  width: 70%;
+  height: 100px;
+  border-radius: 5px;
+  border-width: 0cap;
+  margin: 10px;
+  padding: 10px;
+  text-wrap: soft;
+  font-family: "Open Sans", sans-serif;
 }
 
-.textInputs{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    align-items: center;
-    flex-direction: column;
-    width: 60%;
+.shortTextInput {
+  width: 70%;
+  height: 30px;
+  border-radius: 5px;
+  border-width: 0cap;
+  margin: 10px;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
 }
 
-.PlanoDeAcao{
-    text-align: center;
+.textInputs {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
 }
 
-.plano-de-acao{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap:20px;
-    width: 80%;
-    height: 600px;
-    justify-content:space-around;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 30px;
+.PlanoDeAcao {
+  text-align: center;
 }
 
-.acao{
-    width:100%;
-    height:calc(100% - 10px);
-    background-color: #ffffff;
-    border-radius: 5px;
-    align-items: center;
+.plano-de-acao {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  width: 80%;
+  height: 600px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
-.textoAcao{
-    display: flex;
-    width: 90%;
-    height: calc(70% - 10px);
-    margin: 0 auto;
-    border-radius: 5px;
-    background-color: #3679712b;
-    color:#747373;
-    padding: 10px;
+.acao {
+  width: 100%;
+  height: calc(100% - 10px);
+  background-color: #ffffff;
+  border-radius: 5px;
+  align-items: center;
 }
 
-p{
-    margin: 0px;
-    text-align: left;
+.textoAcao {
+  display: flex;
+  width: 90%;
+  height: calc(70% - 10px);
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #3679712b;
+  color: #747373;
+  padding: 10px;
 }
 
-footer{
-    background-color: #474747;
-    color: #cdcdcd;
-    text-align: center;
-    padding: 15px;
-    padding-left: 30px;
-    margin: 0 auto;
-    margin-left: -10px;
-    margin-bottom: 0px;
-    width: 100vw;
-    height: 50px;
+p {
+  margin: 0px;
+  text-align: left;
+}
+
+footer {
+  background-color: #474747;
+  color: #cdcdcd;
+  text-align: center;
+  padding: 15px;
+  padding-left: 30px;
+  margin: 0 auto;
+  margin-left: -10px;
+  margin-bottom: 0px;
+  width: 100vw;
+  height: 50px;
+}
+
+/* Estilos do Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 3% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideIn 0.3s;
+  position: relative;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}
+
+.modal-content h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #474747;
 }
 
 @media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
 
-    h1{
-        font-size: 40px;
-    }
+  h2 {
+    font-size: 25px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 
-    h2{
-        font-size: 25px;
-    }
-    .content{
-        display: flex;
-        flex-direction: column;
-        width: 95vw;
-        height: auto;
-        margin: 0 auto;
-        margin-top: 20px;    
-    }
+  .plano-de-acao {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 90%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 
-    .plano-de-acao{
-        display:grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap:20px;
-        width: 90%;
-        height: auto;
-        justify-content:space-around;
-        align-items: center;
-        margin: 0 auto;
-        margin-bottom: 30px;
-    }
+  .acao {
+    width: 100%;
+  }
 
-    .acao{
-        width:100%;
-    }
+  .textoAcao {
+    display: flex;
+    width: 90%;
+    height: 200px;
+    margin-bottom: 15px;
+  }
 
-    .textoAcao{
-        display: flex;
-        width: 90%;
-        height: 200px;
-        margin-bottom: 15px;
+  .textInputs {
+    width: 80vw;
+  }
 
-    }
+  .longTextInput {
+    width: 70vw;
+  }
 
-    .textInputs{
-        width: 80vw;
-    }
+  .shortTextInput {
+    width: 70vw;
+  }
 
-    .longTextInput{
-        width: 70vw;
-    }
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+    padding: 15px;
+  }
 
-    .shortTextInput{    
-        width: 70vw;
-    }
+  .close {
+    font-size: 30px;
+    top: 10px;
+    right: 15px;
+  }
 }
