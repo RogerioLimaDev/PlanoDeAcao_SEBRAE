@@ -25,6 +25,7 @@ git push origin main
 ### 2. Deploy no Vercel
 
 **OPÇÃO A - Via Web (Mais fácil):**
+
 1. Acesse https://vercel.com
 2. Login com GitHub
 3. "Add New" → "Project"
@@ -35,6 +36,7 @@ git push origin main
 6. Clique em "Deploy"
 
 **OPÇÃO B - Via CLI:**
+
 ```bash
 npm i -g vercel
 vercel login
@@ -46,6 +48,7 @@ vercel --prod
 ⚠️ **CRÍTICO:** Sem isso a API não funciona!
 
 No painel do Vercel:
+
 - Settings → Environment Variables
 - Adicione: `OPENAI_API_KEY` = `sua-chave-aqui`
 - Marque: Production, Preview, Development
@@ -56,19 +59,22 @@ No painel do Vercel:
 ## 📝 O Que Mudou:
 
 ### ANTES (❌ Inseguro):
+
 ```javascript
 fetch("https://api.openai.com/v1/chat/completions", {
   headers: {
-    Authorization: "Bearer sk-proj-..." // ❌ CHAVE EXPOSTA!
-  }
-})
+    Authorization: "Bearer sk-proj-...", // ❌ CHAVE EXPOSTA!
+  },
+});
 ```
 
 ### AGORA (✅ Seguro):
+
 ```javascript
-fetch("/api/gerar-estrategia", {  // ✅ Sua API segura
-  body: JSON.stringify({ prompt })
-})
+fetch("/api/gerar-estrategia", {
+  // ✅ Sua API segura
+  body: JSON.stringify({ prompt }),
+});
 ```
 
 A chave fica apenas no servidor Vercel! 🔐

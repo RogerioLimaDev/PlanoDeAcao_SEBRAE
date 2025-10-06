@@ -19,10 +19,12 @@ git push origin main
 ```
 
 ### 2️⃣ Acesse o Vercel
+
 - Vá para: https://vercel.com
 - Faça login com GitHub
 
 ### 3️⃣ Crie Novo Projeto
+
 - Clique em **"Add New..." → "Project"**
 - Procure por: **PlanoDeAcao_SEBRAE**
 - Clique em **"Import"**
@@ -37,13 +39,15 @@ Value: sk-proj-gBjGCKGSaX... (sua chave completa)
 ```
 
 **Marque todos os ambientes:**
+
 - ✅ Production
-- ✅ Preview  
+- ✅ Preview
 - ✅ Development
 
 Clique em **"Add"**
 
 ### 5️⃣ Deploy
+
 - Clique em **"Deploy"**
 - Aguarde 1-2 minutos ☕
 - ✅ **Pronto!** Seu site está no ar!
@@ -53,6 +57,7 @@ Clique em **"Add"**
 ## 🔗 Após o Deploy
 
 Você receberá um link tipo:
+
 ```
 https://plano-de-acao-sebrae.vercel.app
 ```
@@ -64,12 +69,15 @@ Teste o site e veja se funciona!
 ## 🐛 Problemas Comuns
 
 ### ❌ Erro 500 na API
+
 **Solução:** Verifique se você adicionou a variável `OPENAI_API_KEY`
 
 ### ❌ API Key inválida
+
 **Solução:** Vá em Settings → Environment Variables e atualize a chave
 
 ### ❌ CORS Error
+
 **Solução:** Já está configurado no código! Deve funcionar automaticamente.
 
 ---
@@ -89,6 +97,7 @@ git push
 ## 📞 Precisa de Ajuda?
 
 Verifique os logs no painel do Vercel:
+
 - Dashboard → Seu projeto → Deployments → Ver logs
 
 ---

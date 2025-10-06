@@ -43,6 +43,7 @@ PlanoDeAcao_SEBRAE/
 ### Passo a Passo Completo:
 
 1. **Faça commit e push do código para o GitHub**
+
    ```bash
    git add .
    git commit -m "Adiciona configuração Vercel e API segura"
@@ -50,15 +51,18 @@ PlanoDeAcao_SEBRAE/
    ```
 
 2. **Acesse o Vercel**
+
    - Vá para [vercel.com](https://vercel.com)
    - Faça login com sua conta GitHub
 
 3. **Importe o Projeto**
+
    - Clique em **"Add New..." → "Project"**
    - Selecione o repositório **PlanoDeAcao_SEBRAE**
    - Clique em **"Import"**
 
 4. **Configure a Variável de Ambiente** ⚠️ IMPORTANTE
+
    - Em "Environment Variables", adicione:
      - **Name:** `OPENAI_API_KEY`
      - **Value:** Sua chave da OpenAI (sk-proj-...)

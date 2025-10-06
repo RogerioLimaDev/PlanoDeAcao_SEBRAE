@@ -44,18 +44,18 @@ export default async function handler(req, res) {
 
     if (!response.ok) {
       console.error("Erro da OpenAI:", data);
-      return res.status(response.status).json({ 
+      return res.status(response.status).json({
         error: "Erro ao processar com OpenAI",
-        details: data 
+        details: data,
       });
     }
 
     res.status(200).json(data);
   } catch (error) {
     console.error("Erro ao processar requisição:", error);
-    res.status(500).json({ 
+    res.status(500).json({
       error: "Erro ao processar requisição",
-      message: error.message 
+      message: error.message,
     });
   }
 }
