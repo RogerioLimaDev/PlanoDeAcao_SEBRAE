@@ -198,7 +198,7 @@ footer {
 
 /* Estilos do Modal */
 .modal {
-  display: none;
+  /* display: none; */
   position: fixed;
   z-index: 1000;
   left: 0;
