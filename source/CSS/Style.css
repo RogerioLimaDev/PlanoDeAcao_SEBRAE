@@ -8,6 +8,7 @@ body {
   width: 100vw;
 }
 
+
 h1 {
   font-size: 60px;
 }
@@ -16,6 +17,20 @@ h2 {
   font-size: 30px;
 }
 
+#tituloPagina {
+  font-size: 70px;
+  /* margin-top: 20px;
+  margin-bottom: 10px; */
+  color: #e5e5e5;
+}
+
+#subtitulo-swot{
+  font-size: 20px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  color: #e5e5e5;
+  font-weight: normal;
+}
 .subtitulo-swot {
   font-size: 20px;
   margin-top: -40px;
@@ -43,6 +58,16 @@ h2 {
   background-color: #4da4f0;
 }
 
+.header{
+  text-align: center;
+  color:#e9e9e9;
+  background-color: rgb(12, 74, 106);
+  width: 90%;
+  border-radius: 20px 20px 0  0;
+  margin: 0 auto;
+  height: 200px;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -64,7 +89,7 @@ h2 {
   margin-bottom: 30px;
   width: 100%;
   background-color: #5e9da62b;
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
   border-width: 5px;
   border-color: black;
   display: flex;
@@ -144,9 +169,14 @@ p {
   margin: 0px;
   text-align: left;
 }
+a{
+  text-decoration: none;
+  color: #81a287;
+  font-weight: bold;}
 
 footer {
-  background-color: #474747;
+  display: flex;
+  background-color: #000000;
   color: #cdcdcd;
   text-align: center;
   padding: 15px;
@@ -155,7 +185,12 @@ footer {
   margin-left: -10px;
   margin-bottom: 0px;
   width: 100vw;
-  height: 50px;
+  height: 250px;
+}
+
+.footerinfo{
+  width:90%;
+  margin:auto;
 }
 
 /* Estilos do Modal */
