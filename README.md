@@ -12,16 +12,19 @@ Ferramenta para geração automatizada de planos de ação estratégicos baseado
 
 ```
 PlanoDeAcao_SEBRAE/
-├── index.html              # Frontend principal
+├── index.html                 # Frontend principal (Português)
+├── index-en.html              # Frontend em inglês
 ├── source/
 │   ├── CSS/
-│   │   └── Style.css       # Estilos
+│   │   └── Style.css          # Estilos (compartilhado)
 │   └── javascript/
-│       └── llm.js          # Lógica do frontend
+│       ├── llm.js             # Lógica do frontend (Português)
+│       └── llm-en.js          # Lógica do frontend (Inglês)
 ├── api/
-│   └── gerar-estrategia.js # Função serverless (backend)
-├── vercel.json             # Configuração do Vercel
-└── README.md               # Este arquivo
+│   ├── gerar-estrategia.js    # API backend (Português)
+│   └── gerar-estrategia-en.js # API backend (Inglês)
+├── vercel.json                # Configuração do Vercel
+└── README.md                  # Este arquivo
 ```
 
 ## 🔧 Configuração Local (Opcional)
@@ -87,6 +90,19 @@ PlanoDeAcao_SEBRAE/
 - ✅ Modal responsivo com resultados
 - ✅ Proteção contra múltiplos cliques
 - ✅ Design responsivo (mobile-friendly)
+- ✅ **Versão em português e inglês**
+
+## 🌍 Versões Disponíveis
+
+### Português
+- **URL:** `/` ou `/index.html`
+- **API:** `/api/gerar-estrategia`
+- **Script:** `llm.js`
+
+### English
+- **URL:** `/index-en.html`
+- **API:** `/api/gerar-estrategia-en`
+- **Script:** `llm-en.js`
 
 ## 🔄 Atualizações Futuras
 

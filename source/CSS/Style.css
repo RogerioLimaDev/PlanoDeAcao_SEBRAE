@@ -8,6 +8,34 @@ body {
   width: 100vw;
 }
 
+/* Language Switcher */
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.lang-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.lang-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.lang-link.active {
+  background-color: rgba(2, 106, 158, 0.8);
+  font-weight: bold;
+}
 
 h1 {
   font-size: 60px;

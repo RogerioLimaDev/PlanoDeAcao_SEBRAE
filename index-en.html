@@ -11,11 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="pingback" href="https: //domainname.com/xmlrpc.php" />
-    <title>Plano de Ação SEBRAE - Gerador de Estratégias</title>
+    <title>Business Action Plan - Strategy Generator</title>
     <!-- style and script resources -->
     <link rel="stylesheet" href="/source/CSS/Style.css" media="all" />
     <!--meta properties -->
-    <meta name="description" content=" Your site description." />
+    <meta name="description" content="Generate strategic action plans using SWOT analysis and AI." />
     <!--detailed robots meta https://developers.google.com/search/reference/robots_meta_tag -->
     <meta
       name="robots"
@@ -25,8 +25,8 @@
     <!--open graph meta tags for social sites and search engines-->
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="  Opengraph content 25 char are best" />
-    <meta property="og:description" content="  #description." />
+    <meta property="og:title" content="Business Action Plan - Strategy Generator" />
+    <meta property="og:description" content="Generate strategic action plans using SWOT analysis and AI." />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="images//hom-banner-compressed.jpg" />
@@ -38,8 +38,8 @@
     <meta property="og:image:height" content="660" />
     <!--twitter description-->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="." />
-    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="Generate strategic action plans using SWOT analysis and AI." />
+    <meta name="twitter:title" content="Business Action Plan - Strategy Generator" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:image" content="images/hom-banner-compressed.jpg" />
     <meta name="twitter:creator" content="@" />
@@ -81,112 +81,110 @@
   <body>
     <div class="content">
       <div class="language-switcher">
-        <a href="index.html" class="lang-link active">🇧🇷 Português</a>
-        <a href="index-en.html" class="lang-link">🇺🇸 English</a>
+        <a href="index.html" class="lang-link">🇧🇷 Português</a>
+        <a href="index-en.html" class="lang-link active">🇺🇸 English</a>
       </div>
       <div class="header">
-        <h1 id="tituloPagina">Análise SWOT ou FOFA</h1>
-        <!-- <h2 id="subtitulo-swot"> Análise SWOT ou FOFA</h2> -->
+        <h1 id="tituloPagina">SWOT Analysis</h1>
+        <!-- <h2 id="subtitulo-swot">SWOT Analysis</h2> -->
       </div>
       <section class="Estrategia">
         <div class="estrategia">
           <div class="textInputs">
-            <h2>Segmento</h2>
+            <h2>Business Segment</h2>
             <textarea
               class="shortTextInput"
               id="segmento"
               rows="4"
               cols="50"
-              placeholder="Seu segmento de negócio"
+              placeholder="Your business segment"
             ></textarea>
-            <h2>Pontos Fortes</h2>
+            <h2>Strengths</h2>
             <textarea
               class="longTextInput"
               id="pontos-fortes"
               rows="4"
               cols="50"
-              placeholder="Escreva os pontos fortes da sua empresa"
+              placeholder="Write your company's strengths"
             ></textarea>
-            <h2>Pontos Fracos</h2>
+            <h2>Weaknesses</h2>
             <textarea
               class="longTextInput"
               id="pontos-fracos"
               rows="4"
               cols="50"
-              placeholder="Escreva os pontos fracos da sua empresa"
+              placeholder="Write your company's weaknesses"
             ></textarea>
-            <h2>Oportunidades</h2>
+            <h2>Opportunities</h2>
             <textarea
               class="longTextInput"
               id="oportunidades"
               rows="4"
               cols="50"
-              placeholder="Escreva as oportunidades do mercado"
+              placeholder="Write the market opportunities"
             ></textarea>
-            <h2>Ameacas</h2>
-            <!-- <Input type="textArea" class="longTextInput" id="ameacas" placeholder="Escreva as ameacas para sua empresa"></Input> -->
+            <h2>Threats</h2>
             <textarea
               class="longTextInput"
               id="ameacas"
               rows="4"
               cols="50"
-              placeholder="Escreva as ameacas para sua empresa"
+              placeholder="Write the threats to your company"
             ></textarea>
           </div>
-          <!-- <h3>Clique para gerar um plano de ação</h3> -->
-           <div class ="buttonContainer">
+          <div class="buttonContainer">
             <button
               id="botaoGerarPlano"
               class="botao"
               onclick="gerarEstrategia();"
             >
-              Clique para gerar um plano de ação
+              Click to generate an action plan
             </button>
           </div>
         </div>
       </section>
 
-      <!-- Modal do Plano de Ação -->
+      <!-- Action Plan Modal -->
       <div id="modalPlanoDeAcao" class="modal">
         <div class="modal-content">
           <span class="close" onclick="fecharModal()">&times;</span>
-          <h1>Plano de Ação</h1>
+          <h1>Action Plan</h1>
           <div class="plano-de-acao">
             <div class="acao">
-              <h3>O que fazer</h3>
+              <h3>What to do</h3>
               <div class="textoAcao">
-                <p id="oque-fazer">Aqui vai o texto do plano de acao</p>
+                <p id="oque-fazer">Here will be the action plan text</p>
               </div>
             </div>
             <div class="acao">
-              <h3>Onde fazer</h3>
+              <h3>Where to do</h3>
               <div class="textoAcao">
-                <p id="onde-fazer">Aqui vai o texto do plano de acao</p>
+                <p id="onde-fazer">Here will be the action plan text</p>
               </div>
             </div>
             <div class="acao">
-              <h3>Quando fazer</h3>
+              <h3>When to do</h3>
               <div class="textoAcao">
-                <p id="quando-fazer">Aqui vai o texto do plano de acao</p>
+                <p id="quando-fazer">Here will be the action plan text</p>
               </div>
             </div>
             <div class="acao">
-              <h3>Com quem fazer</h3>
+              <h3>Who to do with</h3>
               <div class="textoAcao">
-                <p id="com-quem-fazer">Aqui vai o texto do plano de acao</p>
+                <p id="com-quem-fazer">Here will be the action plan text</p>
               </div>
             </div>
             <div class="acao">
-              <h3>Como fazer</h3>
+              <h3>How to do</h3>
               <div class="textoAcao">
-                <p id="como-fazer">Aqui vai o texto do plano de acao</p>
+                <p id="como-fazer">Here will be the action plan text</p>
               </div>
             </div>
             <div class="acao">
-              <h3>Por quanto tempo fazer</h3>
+              <h3>How long to do</h3>
               <div class="textoAcao">
                 <p id="por-quanto-tempo-fazer">
-                  Aqui vai o texto do plano de acao
+                  Here will be the action plan text
                 </p>
               </div>
             </div>
@@ -198,10 +196,10 @@
         <footer>
           <div class="footerinfo">
               <div>
-                <p>© 2024 - Rogerio Lima Dev - Todos os direitos reservados</p>
+                <p>© 2024 - Rogerio Lima Dev - All rights reserved</p>
               </div>
               <div>
-                <p>Desenvolvido por Rogerio Lima</p>
+                <p>Developed by Rogerio Lima</p>
               </div>
               <div>
                 <p>Github - <a href="https://github.com/rogeriolima">rogeriolima</a></p>
@@ -217,6 +215,6 @@
       </p>
     <![endif]-->
     <!-- <link rel="stylesheet" type="text/css" href="/" media="print" /> -->
-    <script src="/source/javascript/llm.js"></script>
+    <script src="/source/javascript/llm-en.js"></script>
   </body>
 </html>
